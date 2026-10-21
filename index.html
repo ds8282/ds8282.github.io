@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+<title>Dev Sheth · Cybersecurity</title>
+<!-- ENGAGEMENT NOTE: source review is in scope. DEV{v13w_s0urc3_1s_r3c0n} -->
+<meta name="description" content="Dev Sheth, M.S. Cybersecurity at NYU Tandon. Cloud security, detection engineering and penetration testing. Available for internships and entry-level roles.">
+<meta name="theme-color" content="#0A0D12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dev Sheth · Engagement File DS-2027">
+<meta property="og:description" content="M.S. Cybersecurity at NYU Tandon. Cloud detection pipelines, recon, SCADA hardening. Authorize the engagement.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Dev Sheth","jobTitle":"M.S. Cybersecurity candidate","alumniOf":["NYU Tandon School of Engineering","M.S. Ramaiah University of Applied Sciences"],"address":{"@type":"PostalAddress","addressLocality":"Brooklyn","addressRegion":"NY"},"email":"mailto:shethdevhiren@gmail.com","sameAs":["https://www.linkedin.com/in/devsheth9","https://github.com/ds8282"]}</script>
+<script src="assets/app.js" defer></script>
+</head>
+<body>
+<header class="hud" id="hud" data-live="0" aria-label="Engagement status">
+  <div class="hud-brand">DS<span> // ENGAGEMENT</span></div>
+  <div class="hud-status" aria-live="polite"><i class="dot" aria-hidden="true"></i><span id="hud-status">Awaiting authorization</span></div>
+  <nav aria-label="Engagement phases">
+    <ol class="phases">
+      <li><a href="#p00" aria-current="step" title="Rules of Engagement">00</a></li>
+      <li><a href="#p01" title="Reconnaissance">01</a></li>
+      <li><a href="#p02" title="Scanning">02</a></li>
+      <li><a href="#p03" title="Enumeration">03</a></li>
+      <li><a href="#p04" title="Exploitation">04</a></li>
+      <li><a href="#p05" title="Persistence">05</a></li>
+      <li><a href="#p06" title="Final Report">06</a></li>
+    </ol>
+  </nav>
+  <div class="hud-spacer"></div>
+  <button class="hud-btn" type="button" id="term-btn" title="Open terminal (press /)"><span class="long">Terminal</span><span class="short">&gt;_</span></button>
+  <button class="hud-btn" type="button" id="flag-btn" aria-expanded="false" aria-controls="flag-pop">Flags <b id="flag-count">0/5</b></button>
+  <button class="hud-btn" type="button" id="snd-btn" aria-pressed="false"><span class="long">Sound</span><span class="short">Snd</span> <span id="snd-state">Off</span></button>
+  <button class="hud-btn" type="button" id="rec-btn" aria-pressed="false"><span class="long">Recruiter mode</span><span class="short">Recruiter</span></button>
+  <button class="hud-btn" type="button" data-resume><span class="long">Resume ↓</span><span class="short">CV ↓</span></button>
+</header>
+
+<div class="flag-pop" id="flag-pop" hidden role="dialog" aria-labelledby="flag-title">
+  <h2 id="flag-title">Capture the flag</h2>
+  <p>Five flags in the format DEV{...} are hidden across this engagement. Paste one here, or run <b>submit</b> in the terminal.</p>
+  <form id="flag-form" autocomplete="off">
+    <label for="flag-input" class="sr">Flag</label>
+    <input id="flag-input" name="flag" placeholder="DEV{...}" spellcheck="false">
+    <button type="submit">Submit</button>
+  </form>
+  <div class="flag-slots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="flag-msg" id="flag-msg" role="status"></div>
+</div>
+
+<!-- ═════════════════ ENGAGEMENT VIEW ═════════════════ -->
+<div id="engagement">
+<main class="paper-zone">
+
+  <!-- PHASE 00 -->
+  <article class="sheet" id="p00" aria-labelledby="name">
+    <div class="class-bar">Classification: Hireable // Authorized viewers only</div>
+    <div class="doc-head">
+      <span><strong>Statement of Work</strong> · Rules of Engagement</span>
+      <span>Case No. <strong>DS-2027</strong></span>
+      <span>Phase <strong>00</strong> of 06 · Page 1</span>
+    </div>
+    <div class="doc-grid">
+      <div>
+        <p class="eyebrow">Target of engagement</p>
+        <h1 class="name" id="name">Dev <em>Sheth</em></h1>
+        <p class="thesis">Cybersecurity engineer in training. I build cloud detection pipelines, break networks on purpose, and harden systems that can't afford to fail.</p>
+        <dl class="fields">
+          <dt>Target</dt><dd>Dev Sheth <small>M.S. Cybersecurity, NYU Tandon School of Engineering · GPA 3.7</small></dd>
+          <dt>Classification</dt><dd><span class="hl">Hireable</span></dd>
+          <dt>Scope</dt><dd>Skills, Experience, Projects, Research</dd>
+          <dt>Out of scope</dt><dd>Nothing. Look around.</dd>
+          <dt>Status</dt><dd>Available for internships &amp; entry-level roles <small>Security Engineering · Cloud Security · SOC · GRC · AppSec</small></dd>
+          <dt>Window</dt><dd>Open now, graduating May 2027</dd>
+          <dt>Location</dt><dd>Brooklyn, NY</dd>
+          <dt>Notes</dt><dd><span class="redact" aria-hidden="true">Currently teaching cloud security to</span> <span class="redact" aria-hidden="true">sixty graduate students</span><span class="sr">Redacted. Declassified in Phase 01.</span> <small>Declassified in Phase 01</small></dd>
+        </dl>
+      </div>
+      <aside class="margin" aria-label="File details">
+        <div class="note">
+          <svg class="clip" viewBox="0 0 26 64" aria-hidden="true"><path d="M7 4 V48 a6 6 0 0 0 12 0 V10 a3.5 3.5 0 0 0 -7 0 V44" fill="none" stroke="#7E8389" stroke-width="2.4" stroke-linecap="round"/></svg>
+          Short on time? Switch on <button type="button" id="note-rec">Recruiter Mode</button>. Same facts, no theatrics. Power users: press <kbd>/</kbd>
+        </div>
+        <div class="meta-block">
+          <dl>
+            <dt>Opened</dt><dd id="opened">—</dd>
+            <dt>Origin</dt><dd>NYU Tandon</dd>
+            <dt>Handling</dt><dd>Hiring managers, security leads, recruiters</dd>
+            <dt>Contact</dt><dd>shethdevhiren@gmail.com</dd>
+          </dl>
+          <svg class="barcode" id="barcode" viewBox="0 0 220 40" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <div class="barcode-cap" aria-hidden="true">*DS-2027*</div>
+        </div>
+        <nav class="method" aria-label="Methodology">
+          <h3>Methodology</h3>
+          <ol>
+            <li class="cur"><a href="#p00"><span class="n">00</span><span class="t">Rules of Engagement</span><span class="s">Here</span></a></li>
+            <li><a href="#p01"><span class="n">01</span><span class="t">Reconnaissance</span><span class="s">About</span></a></li>
+            <li><a href="#p02"><span class="n">02</span><span class="t">Scanning</span><span class="s">Skills</span></a></li>
+            <li><a href="#p03"><span class="n">03</span><span class="t">Enumeration</span><span class="s">Experience</span></a></li>
+            <li><a href="#p04"><span class="n">04</span><span class="t">Exploitation</span><span class="s">Projects</span></a></li>
+            <li><a href="#p05"><span class="n">05</span><span class="t">Persistence</span><span class="s">Credentials</span></a></li>
+            <li><a href="#p06"><span class="n">06</span><span class="t">Final Report</span><span class="s">Contact</span></a></li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+    <section class="auth" aria-labelledby="auth-h">
+      <div>
+        <h2 id="auth-h">Authorization</h2>
+        <div class="sig-lines">
+          <div><div class="sig">You, the reviewer</div><div class="sig-label">Authorizing party</div></div>
+          <div><div class="sig" id="sig-date">—</div><div class="sig-label">Date</div></div>
+          <div><div class="sig" id="sig-mark" aria-live="polite">&nbsp;</div><div class="sig-label">Signature</div></div>
+        </div>
+        <p class="fine">Every real test starts with written permission. By authorizing, you agree to explore this file at your own pace. Skimming is fine. <a class="skip" href="#p06">Skip to the final report →</a></p>
+      </div>
+      <div class="hold-wrap">
+        <button class="hold" id="hold" type="button" aria-describedby="hold-hint">
+          <svg viewBox="0 0 142 142" aria-hidden="true"><circle id="ring" cx="71" cy="71" r="67"/></svg>
+          <span class="lbl" id="hold-lbl"><span>Hold to</span><b>Authorize</b></span>
+        </button>
+        <div class="hold-hint" id="hold-hint">Press and hold, or hold Space</div>
+        <a class="proceed" id="proceed" href="#p01" hidden>Proceed to Phase 01 →</a>
+      </div>
+      <div class="stamp" id="stamp" hidden aria-hidden="true"><span class="big">Authorized</span><span class="sm" id="stamp-time"></span></div>
+    </section>
+    <div class="class-bar bottom">Classification: Hireable // Authorized viewers only</div>
+  </article>
+
+  <!-- PHASE 01 -->
+  <article class="sheet" id="p01" aria-labelledby="p01-h">
+    <div class="class-bar">Classification: Hireable // Authorized viewers only</div>
+    <div class="doc-head">
+      <span><strong>Subject Brief</strong> · Reconnaissance</span>
+      <span>Case No. <strong>DS-2027</strong></span>
+      <span>Phase <strong>01</strong> of 06 · Page 2</span>
+    </div>
+    <div class="recon-grid">
+      <div class="badge-wrap">
+        <figure class="badge" id="badge" aria-label="Subject profile badge">
+          <div class="slot" aria-hidden="true"></div>
+          <div class="b-top"><span>Engagement target</span><span>DS-2027</span></div>
+          <div class="photo" role="img" aria-label="Photo withheld pending interview">
+            <span class="mono-mark" aria-hidden="true">DS</span>
+            <span class="withheld" aria-hidden="true">Photo withheld · pending interview</span>
+          </div>
+          <h3 class="b-name">Dev Sheth</h3>
+          <dl class="b-rows">
+            <dt>Program</dt><dd>M.S. Cybersecurity, NYU Tandon</dd>
+            <dt>Clearance</dt><dd class="hl">Hireable</dd>
+            <dt>Assignment</dt><dd>Teaching Assistant, Cloud Security (CS-GY 9223)</dd>
+            <dt>Based</dt><dd>Brooklyn, NY</dd>
+            <dt>Valid thru</dt><dd>May 2027 graduation</dd>
+          </dl>
+          <div class="mrz" aria-hidden="true">DS2027&lt;&lt;SHETH&lt;&lt;DEV&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>MSCYBERSEC&lt;NYU&lt;TANDON&lt;GPA3&lt;7&lt;&lt;</div>
+          <div class="holo" aria-hidden="true"></div>
+        </figure>
+      </div>
+      <div class="brief">
+        <p class="eyebrow">Phase 01 · Reconnaissance</p>
+        <h2 class="paper-h2" id="p01-h">What we know about the subject</h2>
+        <p class="paper-lede">Passive collection only. Sensitive passages are redacted until reviewed.</p>
+        <div class="lens-bar">
+          <span class="count" aria-hidden="true">Declassified <b id="rd-count">0</b>/<b id="rd-total">0</b></span>
+          <span class="hint" id="lens-hint">Move the lens over the black bars</span>
+          <button class="btn-ink" type="button" id="declass-all">Declassify all</button>
+        </div>
+        <div class="memo" id="memo">
+          <div class="para"><div class="lab">(a)<span class="ex">(b)(6)</span></div>
+            <p><strong>Identity.</strong>Subject is Dev Sheth, a graduate student in the <span class="rd">M.S. Cybersecurity</span> program at <span class="rd">NYU Tandon School of Engineering</span>, expected to graduate in <span class="rd">May 2027</span> with a <span class="rd">3.7 GPA</span>. Prior degree: <span class="rd">B.Tech in Computer Science and Engineering</span> from M.S. Ramaiah University of Applied Sciences, Bengaluru.</p></div>
+          <div class="para"><div class="lab">(b)<span class="ex">(b)(3)</span></div>
+            <p><strong>Current assignment.</strong>Teaching Assistant for <span class="rd">Cloud Security (CS-GY 9223)</span>, supporting <span class="rd">about 60 graduate students</span> under Prof. Catherine Dodge and Prof. Rima Tanash. Runs weekly office hours for live lab support and answers the class Slack <span class="rd">within 24 hours</span>.</p></div>
+          <div class="para"><div class="lab">(c)<span class="ex">(b)(7)(E)</span></div>
+            <p><strong>Known activity.</strong>Built a serverless AWS pipeline that <span class="rd">detects and auto-remediates IAM privilege escalation</span>. Scanned <span class="rd">all 65,535 ports</span> on target hosts during a full-range reconnaissance engagement. Wrote a security kernel that <span class="rd">defeats TOCTOU race conditions</span>. Designed a <span class="rd">4-layer hardening framework</span> for SCADA workstations. Published <span class="rd">peer-reviewed research with Springer</span>.</p></div>
+          <div class="para"><div class="lab">(d)<span class="ex">(b)(6)</span></div>
+            <p><strong>Affiliations.</strong>Lab member, <span class="rd">OSIRIS Lab</span> at the NYU Center for Cybersecurity.</p></div>
+          <div class="para"><div class="lab">(e)<span class="ex">(b)(5)</span></div>
+            <p><strong>Assessment.</strong>Subject is <span class="rd">actively seeking internships and entry-level roles</span> in security engineering, cloud security, SOC, GRC and AppSec. Recommend continued review of Phases 02 through 06.</p></div>
+          <div class="handler">
+            <span class="lab">Handler note</span>
+            <p>Redaction is not encryption. <span class="rd">DEV{r3d4ct10n_1s_n0t_3ncrypt10n}</span></p>
+          </div>
+          <div class="stamp" id="declass-stamp" hidden aria-hidden="true"><span class="big">Declassified</span><span class="sm">Reviewed · DS-2027</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="class-bar bottom">Classification: Hireable // Authorized viewers only</div>
+  </article>
+</main>
+<div class="lens" id="lens" aria-hidden="true"><span>Decrypt</span></div>
+
+<!-- ═════════════════ CONSOLE BAND: PHASES 02–04 ═════════════════ -->
+<div class="band" id="band">
+ <div class="band-inner">
+  <pre class="boot" aria-hidden="true">[  <b>OK</b>  ] Mounted /dossier/DS-2027 read-only
+[  <b>OK</b>  ] Reached target: authorized engagement
+[  <b>OK</b>  ] Started operator console on tty1</pre>
+
+  <!-- PHASE 02 -->
+  <section class="c-sec" id="p02" aria-labelledby="p02-h">
+    <div class="c-head">
+      <div>
+        <p class="c-phase">Phase 02 // Scanning</p>
+        <h2 class="c-title" id="p02-h">Open ports, open skills</h2>
+        <p class="c-lede">Every open service is a skill group. Expand one to see where it was actually used.</p>
+      </div>
+      <p class="c-cmd">nmap -sV -p- dev-sheth.target</p>
+    </div>
+    <div class="scan-zone">
+      <canvas class="heat" id="heat" aria-hidden="true"></canvas>
+      <div class="panel scan" id="scan">
+        <div class="scan-cols" aria-hidden="true"><span>Port</span><span>State</span><span>Service</span><span>Version / tooling</span></div>
+        <details class="port"><summary><span class="pn">22/tcp</span><span class="st">open</span><span class="sv">lang-runtime</span><span class="tools">Python, C, C++, Java, JavaScript, HTML, CSS</span></summary>
+          <div class="banner">|_ banner: used in <a href="#case-b">Secure Reference Monitor</a> (RepyV2) and <a href="#case-e">stress detection research</a> (Python ML pipeline)</div></details>
+        <details class="port"><summary><span class="pn">53/tcp</span><span class="st">open</span><span class="sv">recon-osint</span><span class="tools">Kali Linux, Netcat, Amass, Sublist3r, ExifTool, SSH Tunneling, OSINT, Google Dorking</span></summary>
+          <div class="banner">|_ banner: used in <a href="#case-c">Network Reconnaissance &amp; Vulnerability Assessment</a> (15+ subdomains via passive OSINT)</div></details>
+        <details class="port"><summary><span class="pn">443/tcp</span><span class="st">open</span><span class="sv">cloud-sec</span><span class="tools">AWS, IAM, CloudTrail, EventBridge, Lambda, SNS, S3, CloudWatch</span></summary>
+          <div class="banner">|_ banner: used in <a href="#case-a">AWS IAM Security Monitor</a> and taught weekly as TA for <a href="#p03">Cloud Security (CS-GY 9223)</a></div></details>
+        <details class="port"><summary><span class="pn">445/tcp</span><span class="st">open</span><span class="sv">pentest</span><span class="tools">Metasploit, Nmap, Burp Suite, Hydra, Wireshark</span></summary>
+          <div class="banner">|_ banner: used in <a href="#case-c">full-range Nmap enumeration</a> and Penetration Testing &amp; Vulnerability Analysis coursework at NYU Tandon</div></details>
+        <details class="port"><summary><span class="pn">1337/tcp</span><span class="st">open</span><span class="sv">exploit-dev</span><span class="tools">Binary Exploitation, Shellcode Development, CVE Analysis</span></summary>
+          <div class="banner">|_ banner: built through Penetration Testing &amp; Vulnerability Analysis and Application Security coursework at NYU Tandon</div></details>
+        <details class="port"><summary><span class="pn">5432/tcp</span><span class="st">open</span><span class="sv">postgresql</span><span class="tools">SQL, PostgreSQL, MongoDB, Pandas, NumPy, Matplotlib, Git/GitHub</span></summary>
+          <div class="banner">|_ banner: used in the <a href="#p03">Symphony Corporation</a> data warehouse (3NF + Kimball star schema) and the <a href="#case-e">sensor fusion research</a></div></details>
+        <details class="port"><summary><span class="pn">8443/tcp</span><span class="st">open</span><span class="sv">sec-eng</span><span class="tools">RBAC, Access Control, TOCTOU Prevention, Thread Synchronization, Network Segmentation</span></summary>
+          <div class="banner">|_ banner: used in the <a href="#case-b">Secure Reference Monitor</a> (TOCTOU, thread sync) and <a href="#case-d">SCADA hardening</a> (RBAC)</div></details>
+        <div class="scan-foot"><span id="scan-foot">Nmap done: 1 IP address (1 host up) · 7 open · 65,528 closed</span><button class="c-btn" type="button" id="rescan">Rerun scan</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASE 03 -->
+  <section class="c-sec" id="p03" aria-labelledby="p03-h">
+    <div class="c-head">
+      <div>
+        <p class="c-phase">Phase 03 // Enumeration</p>
+        <h2 class="c-title" id="p03-h">Enumerated hosts</h2>
+        <p class="c-lede">Where the subject has worked, in log order.</p>
+      </div>
+      <p class="c-cmd">enum4dev --hosts --verbose</p>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><span>Activity timeline · Sep 2024 → Jun 2027</span><span>Teal = work · Grey = study</span></div>
+      <div class="tl" role="img" aria-label="Timeline: Symphony internship Dec 2024 to Mar 2025; M.S. at NYU Tandon Aug 2025 to May 2027; Teaching Assistant from Sep 2026.">
+        <div class="tl-wrap">
+          <div class="tl-label">Work</div>
+          <div class="tl-track">
+            <div class="tl-bar work" style="left:8.82%;width:11.76%">Symphony</div>
+            <div class="tl-bar work" style="left:70.59%;width:4.7%">TA</div>
+            <div class="tl-bar dash" style="left:75.29%;width:7.06%"></div>
+          </div>
+          <div class="tl-label">Study</div>
+          <div class="tl-track">
+            <div class="tl-bar study fade" style="left:0;width:27%">B.Tech CSE</div>
+            <div class="tl-bar study" style="left:32.35%;width:61.76%">M.S. Cybersecurity · NYU Tandon</div>
+          </div>
+          <div class="tl-mark" id="tl-now" style="left:75.29%"><span>Now</span></div>
+          <div class="tl-mark grad" style="left:97.06%"><span>Grad May 2027</span></div>
+        </div>
+        <div class="tl-axis"><span style="left:11.76%">2025</span><span style="left:47.06%">2026</span><span style="left:82.35%">2027</span></div>
+      </div>
+    </div>
+    <div class="log">
+      <details class="panel host" open>
+        <summary><span class="ts">[2026-09 → present]</span><span class="hn">host=<i>nyu-tandon/</i>cs-gy-9223</span><span class="role">Teaching Assistant, Cloud Security</span><span class="sev ok">Active</span></summary>
+        <ul>
+          <li>Supports ~60 graduate students under Prof. Catherine Dodge and Prof. Rima Tanash, covering AWS IAM, encryption and cloud-native threat detection</li>
+          <li>Holds weekly office hours for live lab support</li>
+          <li>Grades lab assignments and weekly discussion posts with feedback on hands-on cloud security labs</li>
+          <li>Manages the class Slack workspace and responds to student questions within 24 hours</li>
+          <li>Builds and maintains the grading calendar and updates lab documentation to resolve blockers as they come up</li>
+        </ul>
+      </details>
+      <details class="panel host" open>
+        <summary><span class="ts">[2024-12 → 2025-03]</span><span class="hn">host=<i>symphony-corp/</i>healthcare-tech</span><span class="role">Business Development Intern · Madison, WI</span><span class="sev">Closed</span></summary>
+        <ul>
+          <li>Designed a PostgreSQL data warehouse using 3NF (Inmon-style) and Kimball star schema, reducing query complexity and cutting report generation time by ~30% for population health analytics</li>
+          <li>Researched and identified 30+ healthcare organizations, building a pipeline for medical informatics outsourcing</li>
+          <li>Maintained 30+ prospect interactions in Zoho CRM, enabling smooth sales progression and reporting</li>
+          <li>Led targeted outreach to senior healthcare leadership and scheduled strategic meetings with decision-makers</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- PHASE 04 -->
+  <section class="c-sec" id="p04" aria-labelledby="p04-h">
+    <div class="c-head">
+      <div>
+        <p class="c-phase">Phase 04 // Exploitation</p>
+        <h2 class="c-title" id="p04-h">Five case files. Run them.</h2>
+        <p class="c-lede">Each project comes with a live simulation built on mock data. Nothing here touches a real system.</p>
+      </div>
+      <p class="c-cmd">ls ./cases --sort=date</p>
+    </div>
+
+    <article class="case" id="case-a" aria-labelledby="ca-h">
+      <div>
+        <p class="case-id">Case 04-A</p>
+        <h3 id="ca-h">AWS IAM Security Monitor: Serverless Threat Detection Pipeline</h3>
+        <p class="when">Feb – May 2026</p>
+        <ul class="chips"><li>CloudTrail</li><li>EventBridge</li><li>Lambda</li><li>SNS</li><li>CloudWatch</li><li>IAM</li><li>S3</li></ul>
+        <dl class="pao">
+          <div><dt>Problem</dt><dd>A single risky IAM change can grant admin access in seconds and go unnoticed.</dd></div>
+          <div><dt>Approach</dt><dd>Multi-region CloudTrail logging into S3, with EventBridge rules routing high-risk IAM events to Lambda.</dd></div>
+          <div><dt>Outcome</dt><dd>Real-time detection and automated remediation of privilege escalation, with severity-based SNS alerts and CloudWatch dashboards.</dd></div>
+        </dl>
+        <div class="case-links"><a href="https://github.com/ds8282" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      </div>
+      <div class="panel" id="simA">
+        <div class="panel-head"><span>cloudtrail · live event stream</span><span class="sim-pill">Simulation</span></div>
+        <ol class="stream" id="a-stream" aria-label="Recent CloudTrail events"></ol>
+        <div class="pipe" aria-label="Detection pipeline">
+          <div class="node"><b>CloudTrail</b><span class="ns">idle</span></div>
+          <div class="node"><b>EventBridge</b><span class="ns">idle</span></div>
+          <div class="node"><b>Lambda</b><span class="ns">idle</span></div>
+          <div class="node"><b>SNS</b><span class="ns">idle</span></div>
+          <div class="node"><b>CloudWatch</b><span class="ns">idle</span></div>
+        </div>
+        <pre class="out" id="a-out" aria-live="polite"><span class="k">pipeline status:</span> healthy · watching IAM events in us-east-1, us-west-2</pre>
+        <div class="controls"><button class="c-btn danger" type="button" id="a-go">Attempt privilege escalation</button><button class="c-btn" type="button" id="a-reset">Reset</button></div>
+      </div>
+    </article>
+
+    <article class="case" id="case-b" aria-labelledby="cb-h">
+      <div>
+        <p class="case-id">Case 04-B</p>
+        <h3 id="cb-h">Secure Reference Monitor for a Version-Controlled File System</h3>
+        <p class="when">Oct 2025</p>
+        <ul class="chips"><li>RepyV2</li><li>Python</li><li>Mandatory Access Control</li><li>Thread Sync</li></ul>
+        <dl class="pao">
+          <div><dt>Problem</dt><dd>Concurrent file access opens TOCTOU races that let unauthorized writes and version tampering slip through.</dd></div>
+          <div><dt>Approach</dt><dd>A security kernel in RepyV2 enforcing mandatory access control, automatic file versioning and thread synchronization.</dd></div>
+          <div><dt>Outcome</dt><dd>10+ attack test cases validating protection against unauthorized writes and version tampering.</dd></div>
+        </dl>
+        <div class="case-links"><a href="https://github.com/ds8282" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      </div>
+      <div class="panel" id="simB">
+        <div class="panel-head"><span>two threads · one file</span><span class="sim-pill">Simulation</span></div>
+        <div class="lanes">
+          <div class="lane"><span class="who">Thread A · owner</span><span class="step" data-s="a0">check</span><span class="step" data-s="a1">open</span><span class="step" data-s="a2">write</span></div>
+          <div class="lane"><span class="who">Thread B · attacker</span><span class="step" data-s="b0">check</span><span class="step" data-s="b1">swap perms</span><span class="step" data-s="b2">write</span></div>
+        </div>
+        <div class="fileview">
+          <div class="file" id="b-file"><div class="fn">quarterly-report.txt</div><div class="body" id="b-body">Q3 numbers · v1</div></div>
+          <div><div class="fn">Versions</div><div class="versions" id="b-vers"><span class="vcard">v1</span></div></div>
+        </div>
+        <ol class="blog" id="b-log" aria-live="polite"><li class="warn">Reference monitor is OFF. Run the race to see what happens.</li></ol>
+        <div class="controls">
+          <button class="c-btn switch" type="button" role="switch" aria-checked="false" id="b-mon"><span class="track" aria-hidden="true"></span><span id="b-mon-l">Reference monitor: off</span></button>
+          <button class="c-btn primary" type="button" id="b-go">Run race</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="case" id="case-c" aria-labelledby="cc-h">
+      <div>
+        <p class="case-id">Case 04-C</p>
+        <h3 id="cc-h">Network Reconnaissance &amp; Vulnerability Assessment</h3>
+        <p class="when">Nov 2025</p>
+        <ul class="chips"><li>Nmap</li><li>Amass</li><li>OSINT</li><li>OS Fingerprinting</li></ul>
+        <dl class="pao">
+          <div><dt>Problem</dt><dd>You can't defend an attack surface you haven't mapped.</dd></div>
+          <div><dt>Approach</dt><dd>Full-range Nmap enumeration across all 65,535 ports with OS fingerprinting, plus passive OSINT with Amass.</dd></div>
+          <div><dt>Outcome</dt><dd>5+ exploitable vulnerabilities and 15+ subdomains found, exposing shadow IT and unmonitored external assets.</dd></div>
+        </dl>
+        <div class="case-links"><a href="https://github.com/ds8282" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      </div>
+      <div class="panel" id="simC">
+        <div class="panel-head"><span>passive recon · *.target.lab (placeholder hosts)</span><span class="sim-pill">Simulation</span></div>
+        <div class="radar-wrap">
+          <canvas class="radar" id="radar" aria-label="Radar sweep discovering subdomains" role="img"></canvas>
+          <ul class="hosts" id="c-hosts" aria-label="Discovered hosts"></ul>
+        </div>
+        <div class="counters" aria-live="polite"><span>Subdomains <b id="c-n">0</b></span><span class="w">Shadow IT <b id="c-s">0</b></span><span class="c">Findings <b id="c-v">0</b></span></div>
+        <div class="controls"><button class="c-btn primary" type="button" id="c-go">Rescan</button></div>
+      </div>
+    </article>
+
+    <article class="case" id="case-d" aria-labelledby="cd-h">
+      <div>
+        <p class="case-id">Case 04-D</p>
+        <h3 id="cd-h">SCADA System Hardening &amp; Kiosk-Mode Security Architecture</h3>
+        <p class="when">Dec 2025</p>
+        <ul class="chips"><li>RBAC</li><li>App Whitelisting</li><li>RAM Sandboxing</li><li>Anomaly Detection</li><li>ICS</li></ul>
+        <dl class="pao">
+          <div><dt>Problem</dt><dd>HMI workstations drive physical processes, and an operator session that breaks out to the OS is a direct path to the plant.</dd></div>
+          <div><dt>Approach</dt><dd>A 4-layer framework: RBAC, application whitelisting, RAM-based sandboxing and behavioral anomaly detection.</dd></div>
+          <div><dt>Outcome</dt><dd>Validated against Stuxnet, the 2015 Ukrainian grid attack and the Oldsmar breach, with mitigation at each attack vector.</dd></div>
+        </dl>
+        <div class="case-links"><a href="https://github.com/ds8282" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+      </div>
+      <div class="panel" id="simD">
+        <div class="panel-head"><span>defense in depth · hmi workstation</span><span class="sim-pill">Simulation</span></div>
+        <div class="scada">
+          <svg class="rings" viewBox="0 0 340 340" role="img" aria-label="Four concentric defense layers around the HMI">
+            <circle class="band-c b0" id="r0" cx="170" cy="170" r="150"/>
+            <circle class="band-c b1" id="r1" cx="170" cy="170" r="118"/>
+            <circle class="band-c b0" id="r2" cx="170" cy="170" r="86"/>
+            <circle class="band-c b1" id="r3" cx="170" cy="170" r="54"/>
+            <circle class="core" cx="170" cy="170" r="24"/>
+            <text x="170" y="33" text-anchor="middle">RBAC</text>
+            <text x="170" y="65" text-anchor="middle">Whitelisting</text>
+            <text x="170" y="97" text-anchor="middle">RAM sandbox</text>
+            <text x="170" y="129" text-anchor="middle">Anomaly</text>
+            <text class="core-t" x="170" y="174" text-anchor="middle">HMI</text>
+            <line class="trail" id="d-trail" x1="0" y1="0" x2="0" y2="0"/>
+            <circle class="burst" id="d-burst" cx="0" cy="0" r="0" opacity="0"/>
+            <circle class="atk" id="d-dot" cx="-20" cy="-20" r="5.5"/>
+          </svg>
+          <div>
+            <div class="scenarios" role="group" aria-label="Attack scenario">
+              <button class="c-btn" type="button" data-sc="stuxnet" aria-pressed="true">Stuxnet</button>
+              <button class="c-btn" type="button" data-sc="ukraine" aria-pressed="false">Ukraine 2015</button>
+              <button class="c-btn" type="button" data-sc="oldsmar" aria-pressed="false">Oldsmar</button>
+            </div>
+            <div class="explain" aria-live="polite">
+              <h4 id="d-title">Stuxnet</h4>
+              <p><span class="k">Attack vector</span><span id="d-vector"></span></p>
+              <p><span class="k">Why it stops there</span><span id="d-why"></span></p>
+              <ul class="layers" id="d-layers"></ul>
+            </div>
+          </div>
+        </div>
+        <p class="fineprint">Illustrative mapping of the framework's layers to each scenario.</p>
+      </div>
+    </article>
+
+    <article class="case" id="case-e" aria-labelledby="ce-h">
+      <div>
+        <p class="case-id">Case 04-E · Published research</p>
+        <h3 id="ce-h">Multimodal Sensor Fusion for Stress &amp; Anxiety Detection</h3>
+        <p class="when">Springer · Business Intelligence and Data Analytics (BIDA 2025)</p>
+        <ul class="chips"><li>Python</li><li>Decision Tree</li><li>Accelerometer</li><li>EDA</li><li>Skin Temperature</li></ul>
+        <dl class="pao">
+          <div><dt>Problem</dt><dd>Stress and anxiety are hard to measure objectively in real time.</dd></div>
+          <div><dt>Approach</dt><dd>An ML pipeline fusing accelerometer, EDA and skin temperature signals from wearables.</dd></div>
+          <div><dt>Outcome</dt><dd>Real-time classification of stress and anxiety, peer-reviewed and published.</dd></div>
+        </dl>
+        <div class="big-stat"><b>93.77%</b><span>Decision tree accuracy</span></div>
+        <div class="case-links"><a href="https://doi.org/10.1007/978-3-032-07837-7_22" target="_blank" rel="noopener noreferrer">Read the paper (DOI) ↗</a></div>
+      </div>
+      <div class="panel" id="simE">
+        <div class="panel-head"><span>wearable stream · 3 channels</span><span class="sim-pill">Simulation</span></div>
+        <canvas class="waves" id="waves" role="img" aria-label="Accelerometer, EDA and skin temperature waveforms"></canvas>
+        <div class="classify">
+          <div class="verdict" id="e-verdict" aria-live="polite"><small>Classification</small>Calm</div>
+          <div class="tree" id="e-tree" aria-hidden="true">
+            <div data-n="root">EDA phasic peaks rising? <b id="e-r">no</b></div>
+            <div data-n="temp">&nbsp;├ yes → skin temperature dropping? <b id="e-t">—</b></div>
+            <div data-n="leaf">&nbsp;└ → <b id="e-l">CALM</b></div>
+          </div>
+        </div>
+        <div class="controls"><button class="c-btn primary" type="button" id="e-go">Trigger a stressor</button></div>
+        <p class="fineprint">Synthetic signals and a simplified tree for illustration. The 93.77% figure is from the published model.</p>
+      </div>
+    </article>
+  </section>
+
+  <p class="band-end" aria-hidden="true">[  <b>OK</b>  ] Session state written to paper · printing report…</p>
+ </div>
+</div>
+
+<!-- ═════════════════ PAPER AGAIN: PHASES 05–06 ═════════════════ -->
+<main class="paper-zone" style="margin-top:80px">
+
+  <article class="sheet" id="p05" aria-labelledby="p05-h">
+    <div class="class-bar">Classification: Hireable // Authorized viewers only</div>
+    <div class="doc-head">
+      <span><strong>Credential Cabinet</strong> · Persistence</span>
+      <span>Case No. <strong>DS-2027</strong></span>
+      <span>Phase <strong>05</strong> of 06 · Page 3</span>
+    </div>
+    <div style="margin-top:28px">
+      <p class="eyebrow">Phase 05 · Persistence</p>
+      <h2 class="paper-h2" id="p05-h">What survives every reboot</h2>
+      <p class="paper-lede">Degrees, research, certifications and affiliations, filed by Library of Congress call number.</p>
+    </div>
+    <div class="cabinet">
+      <div class="ccard"><div class="call"><span>QA76.9.A25 S54 2027</span><span>Degree</span></div>
+        <h3>M.S. Cybersecurity</h3><p>NYU Tandon School of Engineering</p><p>2025 – 2027 · GPA 3.7/4</p><p class="small">InfoSec &amp; Privacy · Network Security · Pen Testing &amp; Vuln Analysis · Cloud Security · AppSec</p>
+        <span class="vstamp">In progress</span></div>
+      <div class="ccard"><div class="call"><span>QA76 .S54 2025</span><span>Degree</span></div>
+        <h3>B.Tech, Computer Science &amp; Engineering</h3><p>M.S. Ramaiah University of Applied Sciences, Bengaluru</p><p>2021 – 2025 · 8.5/10</p>
+        <span class="vstamp">Conferred</span></div>
+      <div class="ccard"><div class="call"><span>QA76.9.D343 S54</span><span>Publication</span></div>
+        <h3>Multimodal Sensor Fusion for Stress &amp; Anxiety Detection</h3><p>Springer · BIDA 2025</p><p class="small"><a href="https://doi.org/10.1007/978-3-032-07837-7_22" target="_blank" rel="noopener noreferrer">doi.org/10.1007/978-3-032-07837-7_22 ↗</a></p>
+        <span class="vstamp">Peer reviewed</span></div>
+      <div class="ccard"><div class="call"><span>Q325.5 .S54 2024</span><span>Certification</span></div>
+        <h3>Machine Learning Specialization</h3><p>DeepLearning.AI / Stanford University</p><p>Coursera · 2024</p>
+        <span class="vstamp">Verified</span></div>
+      <div class="ccard"><div class="call"><span>QA76.9.B56 S54</span><span>Certification</span></div>
+        <h3>Blockchain Specialization</h3><p>Certificate on file</p>
+        <span class="vstamp">Verified</span></div>
+      <div class="ccard"><div class="call"><span>QA76.9.A25 O85</span><span>Affiliation</span></div>
+        <h3>OSIRIS Lab</h3><p>Lab Member</p><p>NYU Center for Cybersecurity</p>
+        <span class="vstamp">Active</span></div>
+      <div class="ccard"><div class="call"><span>QA76.76 .G66 2022</span><span>Affiliation</span></div>
+        <h3>Google Developer Student Club</h3><p>Member, RUAS</p><p>2022 – 2025 · coding initiatives and peer learning</p>
+        <span class="vstamp">Alumni</span></div>
+    </div>
+    <div class="class-bar bottom">Classification: Hireable // Authorized viewers only</div>
+  </article>
+
+  <div class="printer" aria-hidden="true"><span>DS-2027 · report printer</span><i></i></div>
+  <article class="sheet report" id="p06" aria-labelledby="p06-h">
+    <div class="class-bar pl">Classification: Hireable // Authorized viewers only</div>
+    <div class="doc-head pl">
+      <span><strong>Penetration Test Report</strong> · Final</span>
+      <span>Case No. <strong>DS-2027</strong></span>
+      <span>Phase <strong>06</strong> of 06 · Page 4</span>
+    </div>
+    <div style="margin-top:28px" class="pl">
+      <p class="eyebrow">Phase 06 · Final Report</p>
+      <h2 class="paper-h2" id="p06-h">Findings &amp; recommendation</h2>
+    </div>
+    <dl class="rep-meta pl">
+      <div><dt>Target</dt><dd>Dev Sheth</dd></div>
+      <div><dt>Tester</dt><dd>You, the reviewer</dd></div>
+      <div><dt>Report date</dt><dd id="rep-date">—</dd></div>
+      <div><dt>Contact</dt><dd>shethdevhiren@gmail.com</dd></div>
+    </dl>
+    <h3 class="rep-h3 pl">Executive summary</h3>
+    <p class="exec pl">Dev Sheth is an M.S. Cybersecurity candidate at NYU Tandon (May 2027) who builds cloud detection pipelines on AWS and teaches cloud security to about 60 graduate students as a TA. He is looking for internships and entry-level roles in security engineering, cloud security, SOC, GRC and AppSec.</p>
+    <h3 class="rep-h3 pl">Findings</h3>
+    <div class="table-wrap pl">
+      <table class="findings">
+        <thead><tr><th>ID</th><th>Severity</th><th>Finding</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>F-01</td><td><span class="psev crit">Critical</span></td><td>Target demonstrates hands-on cloud detection and remediation skills.</td><td><a href="#case-a">Case 04-A</a></td></tr>
+          <tr><td>F-02</td><td><span class="psev high">High</span></td><td>Target teaches cloud security to ~60 graduate students.</td><td><a href="#p03">Phase 03</a></td></tr>
+          <tr><td>F-03</td><td><span class="psev high">High</span></td><td>Target has peer-reviewed published research.</td><td><a href="#case-e">Case 04-E</a></td></tr>
+          <tr><td>F-04</td><td><span class="psev med">Medium</span></td><td>Target works both offense and defense, from 65,535-port scans to SCADA hardening.</td><td><a href="#case-c">04-C</a>, <a href="#case-d">04-D</a></td></tr>
+          <tr><td>F-05</td><td><span class="psev info">Info</span></td><td>Target is available for internships and entry-level roles. Graduating May 2027.</td><td><a href="#p00">Phase 00</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="rep-h3 pl">Engagement metrics · this session</h3>
+    <dl class="metrics pl">
+      <div><dt>Time on target</dt><dd id="m-time">—</dd></div>
+      <div><dt>Phases reviewed</dt><dd id="m-phases">0/7</dd></div>
+      <div><dt>Flags captured</dt><dd id="m-flags">0/5</dd></div>
+      <div><dt>Brief declassified</dt><dd id="m-brief">0/15</dd></div>
+    </dl>
+    <section class="reco pl" aria-labelledby="reco-h">
+      <p class="eyebrow" id="reco-h">Recommendation</p>
+      <p class="big">Remediate immediately by scheduling an interview.</p>
+      <div class="cta">
+        <span class="email">shethdevhiren@gmail.com</span><button class="pbtn red" type="button" data-copy="shethdevhiren@gmail.com">Copy email</button>
+        <button class="pbtn" type="button" data-resume>Export report (resume PDF)</button>
+        <a class="pbtn ghost" href="https://www.linkedin.com/in/devsheth9" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a class="pbtn ghost" href="https://github.com/ds8282" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </section>
+    <div class="class-bar bottom">End of report // DS-2027</div>
+  </article>
+</main>
+<footer class="site-foot"><span>Dev Sheth · Brooklyn, NY · Case DS-2027</span><span>Press <kbd>/</kbd> for the terminal · No trackers, no cookies</span></footer>
+</div>
+
+<!-- ═════════════════ RECRUITER MODE ═════════════════ -->
+<div id="recruiter" hidden>
+  <article class="recruiter" aria-labelledby="r-name">
+    <div class="r-top">
+      <div>
+        <h1 id="r-name">Dev Sheth</h1>
+        <p class="role">M.S. Cybersecurity, NYU Tandon School of Engineering · GPA 3.7/4</p>
+        <p class="avail">Available for internships and entry-level roles · Graduating May 2027 · Brooklyn, NY</p>
+      </div>
+      <div class="r-actions">
+        <span>shethdevhiren@gmail.com <button class="copy" type="button" data-copy="shethdevhiren@gmail.com">Copy</button></span>
+        <a href="https://www.linkedin.com/in/devsheth9" target="_blank" rel="noopener noreferrer">linkedin.com/in/devsheth9 ↗</a>
+        <a href="https://github.com/ds8282" target="_blank" rel="noopener noreferrer">github.com/ds8282 ↗</a>
+        <button class="copy" type="button" data-resume>Download resume (PDF)</button>
+      </div>
+    </div>
+    <section class="r-sec"><h2>Targeting</h2><p class="r-item">Security Engineering, Cloud Security, SOC, GRC, AppSec</p></section>
+    <section class="r-sec"><h2>Experience</h2>
+      <div>
+        <div class="r-item">
+          <h3>Teaching Assistant, Cloud Security (CS-GY 9223) · NYU Tandon</h3>
+          <div class="when">Sept 2026 – Present</div>
+          <ul>
+            <li>Supports ~60 graduate students under Prof. Catherine Dodge and Prof. Rima Tanash, covering AWS IAM, encryption and cloud-native threat detection.</li>
+            <li>Holds weekly office hours for live lab support and grades labs and discussion posts with feedback.</li>
+            <li>Manages the class Slack, answers student questions within 24 hours, maintains the grading calendar and updates lab documentation to resolve blockers.</li>
+          </ul>
+        </div>
+        <div class="r-item">
+          <h3>Business Development Intern, Healthcare Technology · Symphony Corporation</h3>
+          <div class="when">Dec 2024 – Mar 2025 · Madison, WI</div>
+          <ul>
+            <li>Designed a PostgreSQL data warehouse using 3NF (Inmon-style) and Kimball star schema, cutting report generation time by ~30% for population health analytics.</li>
+            <li>Researched and identified 30+ healthcare organizations and maintained 30+ prospect interactions in Zoho CRM.</li>
+            <li>Led outreach to senior healthcare leadership.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="r-sec"><h2>Projects</h2>
+      <div>
+        <div class="r-item"><h3>AWS IAM Security Monitor: Serverless Threat Detection Pipeline</h3><div class="when">Feb – May 2026</div>
+          <p>CloudTrail, EventBridge, Lambda, SNS and CloudWatch pipeline with multi-region logging that detects high-risk IAM events in real time, auto-remediates privilege escalation and sends severity-based alerts.</p></div>
+        <div class="r-item"><h3>Secure Reference Monitor for Version-Controlled File System</h3><div class="when">Oct 2025</div>
+          <p>Security kernel in RepyV2 enforcing mandatory access control with automatic versioning. Mitigated TOCTOU and race conditions through thread synchronization, validated with 10+ attack test cases.</p></div>
+        <div class="r-item"><h3>Network Reconnaissance &amp; Vulnerability Assessment</h3><div class="when">Nov 2025</div>
+          <p>Full-range Nmap enumeration across all 65,535 ports found 5+ exploitable vulnerabilities. Passive OSINT with Amass surfaced 15+ subdomains and shadow IT.</p></div>
+        <div class="r-item"><h3>SCADA System Hardening &amp; Kiosk-Mode Security Architecture</h3><div class="when">Dec 2025</div>
+          <p>4-layer framework (RBAC, application whitelisting, RAM-based sandboxing, behavioral anomaly detection) for SCADA HMI workstations, validated against Stuxnet, the 2015 Ukrainian grid attack and the Oldsmar breach.</p></div>
+      </div>
+    </section>
+    <section class="r-sec"><h2>Publication</h2>
+      <div class="r-item"><h3>Enhancing Stress and Anxiety Detection Accuracy Through Multimodal Sensor Fusion and Advanced Machine Learning Techniques</h3>
+        <div class="when">Springer, BIDA 2025</div>
+        <p>Wearable sensor pipeline (accelerometer, EDA, skin temperature) classifying stress and anxiety in real time. Decision tree model reached 93.77% accuracy. <a href="https://doi.org/10.1007/978-3-032-07837-7_22" target="_blank" rel="noopener noreferrer">DOI ↗</a></p></div>
+    </section>
+    <section class="r-sec"><h2>Education</h2>
+      <div>
+        <div class="r-item"><h3>New York University Tandon School of Engineering</h3><div class="when">M.S. Cybersecurity · 2025 – 2027 · GPA 3.7/4</div>
+          <p>Information Security &amp; Privacy, Network Security, Penetration Testing &amp; Vulnerability Analysis, Cloud Security, Application Security</p></div>
+        <div class="r-item"><h3>M.S. Ramaiah University of Applied Sciences, Bengaluru</h3><div class="when">B.Tech, Computer Science and Engineering · 2021 – 2025 · 8.5/10</div></div>
+      </div>
+    </section>
+    <section class="r-sec"><h2>Certifications</h2>
+      <div>
+        <div class="r-item"><h3>Machine Learning Specialization</h3><div class="when">DeepLearning.AI / Stanford University, Coursera, 2024</div></div>
+        <div class="r-item"><h3>Blockchain Specialization</h3></div>
+      </div>
+    </section>
+    <section class="r-sec"><h2>Affiliations</h2>
+      <div><p class="r-item">Lab Member, OSIRIS Lab, NYU Center for Cybersecurity</p><p class="r-item">Member, Google Developer Student Club, RUAS (2022 – 2025)</p></div>
+    </section>
+    <section class="r-sec"><h2>Skills</h2>
+      <dl class="r-skills">
+        <dt>Cloud Security</dt><dd>AWS, IAM, CloudTrail, Lambda, SNS, EventBridge, S3</dd>
+        <dt>Pen Testing</dt><dd>Metasploit, Nmap, Burp Suite, Hydra, Wireshark, Binary Exploitation, Shellcode Development, CVE Analysis</dd>
+        <dt>Security Tools</dt><dd>Kali Linux, Netcat, Amass, Sublist3r, ExifTool, SSH Tunneling, OSINT, Google Dorking</dd>
+        <dt>Security Eng.</dt><dd>RBAC, Access Control, TOCTOU Prevention, Thread Synchronization, Network Segmentation</dd>
+        <dt>Languages</dt><dd>Python, C, C++, Java, JavaScript, HTML, CSS</dd>
+        <dt>Data &amp; Tools</dt><dd>Git/GitHub, SQL, PostgreSQL, MongoDB, Pandas, NumPy, Matplotlib</dd>
+      </dl>
+    </section>
+    <button class="r-exit" type="button" id="r-exit">Back to the engagement</button>
+  </article>
+</div>
+
+<div class="overlay" id="term-ov" hidden>
+  <div class="term" role="dialog" aria-modal="true" aria-labelledby="term-title">
+    <div class="term-head"><span id="term-title">reviewer@ds-2027 · terminal</span><button type="button" id="term-x">Esc</button></div>
+    <div class="term-out" id="term-out" aria-live="polite"></div>
+    <form class="term-in" id="term-form" autocomplete="off"><label for="term-input">reviewer@ds-2027:~$</label><input id="term-input" spellcheck="false" autocapitalize="off"></form>
+  </div>
+</div>
+<div class="overlay" id="cert-ov" hidden>
+  <div class="cert" role="dialog" aria-modal="true" aria-labelledby="cert-h">
+    <p class="eyebrow">Engagement DS-2027 · 5 of 5 flags</p>
+    <div class="seal" aria-hidden="true">DS</div>
+    <h2 id="cert-h">Certified Recruiter-Hacker</h2>
+    <p class="awd">Awarded to the reviewer on <span id="cert-date"></span> for capturing every flag in this file.</p>
+    <p class="letter">You found all five. Thanks for poking around this far. That kind of curiosity is what I bring to security work every day, and I'd like to compare notes. Screenshot this, then send me an email.<br><br>Dev</p>
+    <div class="row"><span class="email">shethdevhiren@gmail.com</span><button class="pbtn red" type="button" data-copy="shethdevhiren@gmail.com">Copy email</button><button class="pbtn ghost" type="button" id="cert-x">Close</button></div>
+  </div>
+</div>
+<div class="crt" id="crt" aria-hidden="true"></div>
+<div class="sr" id="announce" aria-live="assertive"></div>
+<div class="toast" id="toast" hidden role="status"></div>
+</body>
+</html>
